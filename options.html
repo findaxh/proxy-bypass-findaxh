@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>域名直连设置</title>
+  <style>
+    body { width:620px; padding:16px; font-family:system-ui; }
+    textarea { width:100%; height:200px; box-sizing:border-box; margin:8px 0; }
+    .row { margin:12px 0; }
+    input[type="text"] { width:100%; padding:6px; box-sizing:border-box; }
+    button { padding:8px 14px; cursor:pointer; margin-right:8px; }
+  </style>
+</head>
+<body>
+  <div class="row">
+    <label>
+      <input type="checkbox" id="enableSwitch"> 启用域名直连分流
+    </label>
+    <p>关闭：扩展释放代理，浏览器使用Windows系统代理（Clash Verge系统代理生效）<br/>
+    开启：下面列表域名直连，其余走下方代理地址；若代理端口探测不通，会自动回退系统代理（图标显示红色"!"角标），无需手动取消勾选</p>
+  </div>
+  <div class="row">
+    <label>代理服务器（Clash Verge默认 socks5://127.0.0.1:7890）</label>
+    <input id="proxyInput">
+  </div>
+  <div class="row">
+    <label>直连域名列表，每行一个，例如 baidu.com （自动匹配子域名）</label>
+    <textarea id="domainList"></textarea>
+  </div>
+  <button id="saveBtn">保存设置</button>
+  <hr style="margin-top:24px;border:none;border-top:1px solid #ccc;">
+  <p style="color:#666;font-size:13px;line-height:1.7;">
+    作者：王雪豪　邮箱：findaxh@outlook.com<br/>
+    版本：v1.0　更新时间：2026-10-08
+  </p>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Domain Bypass System Proxy",
+  "version": "1.0",
+  "description": "开启时自定义域名直连；自动探测代理端口，未启动则自动回退系统代理。点击工具栏图标即可切换",
+  "permissions": [
+    "proxy",
+    "storage",
+    "alarms",
+    "management"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "icons": {
+    "16": "icon-green-16.png",
+    "32": "icon-green-32.png",
+    "48": "icon-green-48.png",
+    "128": "icon-green-128.png"
+  },
+  "action": {
+    "default_icon": {
+      "16": "icon-green-16.png",
+      "32": "icon-green-32.png",
+      "48": "icon-green-48.png",
+      "128": "icon-green-128.png"
+    },
+    "default_title": "域名直连分流：已开启（点击切换）"
+  }
+}
